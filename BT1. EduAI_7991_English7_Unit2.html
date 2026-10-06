@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>EduAI 7991 – English 7 Global Success</title>
+<style>
+:root{
+  --bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#64748b;--line:#e2e8f0;
+  --pri:#2563eb;--pri2:#1d4ed8;--ok:#0f766e;--warn:#b45309;--soft:#eff6ff;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;padding:26px 20px}
+.wrap{max-width:1180px;margin:auto}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+h1{margin:0 0 6px;font-size:28px}.tag{font-size:14px;opacity:.9}.badge{background:#ffffff22;border:1px solid #ffffff55;padding:8px 12px;border-radius:999px}
+main{padding:22px 16px 44px}.grid{display:grid;grid-template-columns:340px 1fr;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 22px #0f172a0b}
+.panel{padding:18px}.panel h2{font-size:18px;margin:0 0 14px}.field{margin-bottom:12px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;padding:10px 11px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:#fff}
+textarea{min-height:78px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+.primary{background:var(--pri);color:#fff}.primary:hover{background:var(--pri2)}.secondary{background:#e2e8f0;color:#0f172a}.ghost{background:#fff;border:1px solid #cbd5e1}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{background:#e2e8f0}.tab.active{background:#0f172a;color:#fff}
+.output{padding:18px;min-height:680px}.notice{padding:12px 14px;border-radius:12px;background:#fff7ed;color:#7c2d12;border:1px solid #fed7aa;font-size:13px;margin-bottom:14px}
+.lesson h2,.lesson h3{color:#0f172a}.lesson h2{border-bottom:2px solid #dbeafe;padding-bottom:6px}.lesson h3{margin-top:22px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f8fafc;border:1px solid var(--line);padding:12px;border-radius:12px}
+table{width:100%;border-collapse:collapse;margin:10px 0 18px;font-size:14px}th,td{border:1px solid #cbd5e1;padding:8px;vertical-align:top}th{background:#f1f5f9;text-align:left}
+.slide{border:1px solid #cbd5e1;border-radius:14px;padding:20px;margin:12px 0;background:linear-gradient(180deg,#fff,#f8fafc);min-height:180px}
+.slide small{color:var(--muted)}.quiz-q{padding:12px 0;border-bottom:1px solid var(--line)}.ans{color:var(--ok);font-weight:700}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.kpi div{padding:10px;border-radius:12px;background:var(--soft);font-size:13px}
+footer{font-size:12px;color:var(--muted);max-width:1180px;margin:20px auto;padding:0 16px}
+@media(max-width:880px){.grid{grid-template-columns:1fr}.output{min-height:0}.meta,.row{grid-template-columns:1fr}.kpi{grid-template-columns:1fr}}
+@media print{
+ header,.panel,.tabs,.actions,.notice,footer{display:none!important}
+ body{background:#fff}.grid{display:block}.card{box-shadow:none;border:0}.output{padding:0}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap top">
+  <div><h1>EduAI 7991</h1><div class="tag">Trợ lý thiết kế học liệu – Tiếng Anh THCS</div></div>
+  <div class="badge">English 7 • Global Success • Unit 2</div>
+</div>
+</header>
+
+<main class="wrap">
+<div class="grid">
+<section class="card panel">
+  <h2>Thiết lập bài dạy</h2>
+  <div class="field"><label>Bài học</label><input id="lesson" value="Unit 2: Healthy Living – Getting Started: Let's go out!"></div>
+  <div class="row">
+    <div class="field"><label>Lớp</label><select id="grade"><option>7</option></select></div>
+    <div class="field"><label>Thời lượng</label><select id="duration"><option value="45">45 phút</option><option value="40">40 phút</option></select></div>
+  </div>
+  <div class="field"><label>Trình độ lớp</label><select id="level"><option value="mixed">Không đồng đều</option><option value="basic">Cần hỗ trợ</option><option value="strong">Khá/Giỏi</option></select></div>
+  <div class="field"><label>Thiết bị</label><select id="device"><option>TV/máy chiếu + loa</option><option>Chỉ bảng và SGK</option><option>Phòng học thông minh</option></select></div>
+  <div class="field"><label>Ưu tiên của giáo viên</label><textarea id="focus">Tăng tương tác nói, hoạt động cặp/nhóm, kiểm tra nhanh cuối giờ.</textarea></div>
+  <button class="primary" onclick="generate()">✨ Tạo học liệu</button>
+  <button class="secondary" onclick="resetDemo()">Khôi phục mẫu</button>
+  <div class="kpi">
+    <div><b>KHBD</b><br/>theo cấu trúc mục tiêu–thiết bị–tiến trình</div>
+    <div><b>Kiểm tra</b><br/>có mức độ nhận biết/hiểu/vận dụng</div>
+    <div><b>Slide</b><br/>8 trang trình chiếu gọn</div>
+  </div>
+</section>
+
+<section class="card output">
+  <div class="notice"><b>Lưu ý căn cứ:</b> Công văn 7991/BGDĐT-GDTrH (17/12/2024) tập trung vào kiểm tra, đánh giá và phụ lục ma trận/bản đặc tả. KHBD trong app dùng cấu trúc phổ biến của Phụ lục IV Công văn 5512/BGDĐT-GDTrH.</div>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('plan',this)">Kế hoạch bài dạy</button>
+    <button class="tab" onclick="showTab('slides',this)">Slide</button>
+    <button class="tab" onclick="showTab('quiz',this)">Bài kiểm tra</button>
+  </div>
+  <div class="actions">
+    <button class="ghost" onclick="window.print()">🖨 In / Lưu PDF</button>
+    <button class="ghost" onclick="exportDoc()">⬇ Xuất Word (.doc)</button>
+    <button class="ghost" onclick="copyCurrent()">📋 Sao chép</button>
+  </div>
+  <div id="plan" class="tabcontent"></div>
+  <div id="slides" class="tabcontent" style="display:none"></div>
+  <div id="quiz" class="tabcontent" style="display:none"></div>
+</section>
+</div>
+</main>
+
+<footer>
+Nguồn nội dung bài học được đối chiếu theo Tiếng Anh 7 Global Success – Unit 2: Healthy Living – Getting Started. Ứng dụng là bản demo học liệu thông minh chạy trực tiếp trên trình duyệt; không gửi dữ liệu học sinh lên máy chủ.
+</footer>
+
+<script>
+let current='plan';
+
+function showTab(id,btn){
+  document.querySelectorAll('.tabcontent').forEach(x=>x.style.display='none');
+  document.getElementById(id).style.display='block'; current=id;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
+}
+function profile(){
+  const level=document.getElementById('level').value;
+  if(level==='basic') return {support:'Cung cấp word bank, mẫu câu “I think … is good/bad for our health because …”; ghép HS khá với HS cần hỗ trợ.',ext:'Chỉ yêu cầu 2–3 câu ngắn, ưu tiên độ chính xác.'};
+  if(level==='strong') return {support:'Cho HS tự giải thích lựa chọn và phản biện lịch sự.',ext:'Mở rộng: nêu lý do, đề xuất một thói quen thay thế lành mạnh hơn.'};
+  return {support:'Phân hóa nhiệm vụ: word bank cho nhóm cần hỗ trợ; câu hỏi “Why?” cho nhóm khá/giỏi.',ext:'HS hoàn thành theo năng lực; khuyến khích dùng because để giải thích.'};
+}
+function timings(total){
+  if(+total===40) return [4,9,16,8,3];
+  return [5,10,18,9,3];
+}
+function generate(){
+  const title=document.getElementById('lesson').value;
+  const duration=document.getElementById('duration').value;
+  const device=document.getElementById('device').value;
+  const focus=document.getElementById('focus').value;
+  const p=profile(), t=timings(duration);
+
+  document.getElementById('plan').innerHTML=`
+  <article class="lesson">
+  <h2>KẾ HOẠCH BÀI DẠY</h2>
+  <div class="meta">
+    <div><b>Môn:</b> Tiếng Anh 7 – Global Success</div><div><b>Thời lượng:</b> ${duration} phút</div>
+    <div><b>Bài:</b> ${title}</div><div><b>Chủ đề:</b> Healthy Living</div>
+  </div>
+
+  <h3>I. Mục tiêu</h3>
+  <p><b>1. Kiến thức:</b> Sau bài học, HS có thể nhận biết và sử dụng một số từ/cụm từ gắn với hoạt động lành mạnh; hiểu ý chính của hội thoại “Let’s go out!”; xác định hoạt động tốt/chưa tốt cho sức khỏe và nói ý kiến đơn giản.</p>
+  <p><b>2. Năng lực:</b> Phát triển năng lực giao tiếp tiếng Anh, hợp tác, tự học; nghe/đọc lấy thông tin chính; trình bày ý kiến trong cặp/nhóm.</p>
+  <p><b>3. Phẩm chất:</b> Có ý thức lựa chọn hoạt động có lợi cho sức khỏe; tích cực và có trách nhiệm khi làm việc nhóm.</p>
+
+  <h3>II. Thiết bị và học liệu</h3>
+  <p><b>Giáo viên:</b> SGK, ${device}, tranh/phiếu hoạt động. <b>Học sinh:</b> SGK, vở, bút; chuẩn bị 2 ví dụ về thói quen tốt cho sức khỏe.</p>
+
+  <h3>III. Tiến trình dạy học</h3>
+  <table>
+  <tr><th>Hoạt động</th><th>Mục tiêu</th><th>Tổ chức thực hiện</th><th>Sản phẩm / đánh giá</th><th>Thời gian</th></tr>
+  <tr><td><b>1. Khởi động – Health Brainstorm</b></td><td>Kích hoạt vốn từ, dẫn vào chủ đề.</td><td>GV viết HEALTHY LIVING; HS theo đội nêu hoạt động/thói quen liên quan. GV chốt 4–6 từ phù hợp và dẫn vào tranh mở đầu.</td><td>Danh sách từ/cụm từ; đánh giá qua quan sát và phản hồi miệng.</td><td>${t[0]}’</td></tr>
+  <tr><td><b>2. Hình thành kiến thức – Listen & Read</b></td><td>Hiểu bối cảnh hội thoại và từ vựng trọng tâm.</td><td>HS quan sát tranh, dự đoán nhân vật/chủ đề. Nghe/đọc hội thoại. GV làm rõ các từ trọng tâm như <i>popular, fresh, join</i> và cụm từ hoạt động ngoài trời.</td><td>HS nêu được nhân vật, nơi chốn và chủ đề Healthy Living; phát âm/hiểu từ khóa.</td><td>${t[1]}’</td></tr>
+  <tr><td><b>3. Luyện tập – Tasks 2–4</b></td><td>Đọc hiểu và dùng từ theo ngữ cảnh.</td><td>HS chọn nội dung đúng về hội thoại; nối/ghi từ hoặc cụm từ dưới tranh; hoàn thành câu bằng từ trong hội thoại. Làm cá nhân → cặp → chữa chung. ${p.support}</td><td>Đáp án nhiệm vụ trong SGK; GV dùng câu hỏi gợi mở để kiểm tra hiểu, không chỉ chốt đáp án.</td><td>${t[2]}’</td></tr>
+  <tr><td><b>4. Vận dụng – Good or Bad for Health?</b></td><td>Dùng ngôn ngữ để đưa ra nhận xét cá nhân.</td><td>HS khảo sát nhanh 3–4 hoạt động/thói quen và nói: “I think … is good/bad for our health because …”. ${p.ext}</td><td>Mỗi cặp/nhóm tạo ít nhất 3 nhận định; đánh giá theo tiêu chí: đúng ý, từ vựng phù hợp, nói rõ ràng, hợp tác.</td><td>${t[3]}’</td></tr>
+  <tr><td><b>5. Củng cố – Exit ticket</b></td><td>Tự đánh giá và củng cố.</td><td>HS viết: (1) 2 từ mới; (2) 1 hoạt động tốt cho sức khỏe; (3) 1 câu dùng “because”.</td><td>Phiếu ra về 3 ý; GV dùng để điều chỉnh tiết sau.</td><td>${t[4]}’</td></tr>
+  </table>
+
+  <h3>IV. Điều chỉnh sau bài dạy</h3>
+  <p>.............................................................................................................................................</p>
+  <p><b>Ưu tiên đã tích hợp:</b> ${focus}</p>
+  </article>`;
+
+  const slides = [
+    ["1","UNIT 2 – HEALTHY LIVING","Getting Started: Let’s go out!","Today: talk about healthy activities and understand the opening conversation."],
+    ["2","WARM-UP: HEALTH BRAINSTORM","Work in two teams.","Write as many healthy activities as you can in 60 seconds."],
+    ["3","LOOK & PREDICT","Who can you see? Where are they? What are they doing?","Predict: What are Mark and Mi talking about?"],
+    ["4","KEY WORDS","popular • fresh • join","Say the words, match them with meaning/context, then make one short sentence."],
+    ["5","LISTEN & READ","Focus on the main idea.","Listen/read and check your prediction. Find activities mentioned in the conversation."],
+    ["6","PRACTICE","Tasks 2–4","Choose the correct idea → label pictures → complete sentences. Check with a partner."],
+    ["7","SPEAKING GAME","Good or Bad for Health?","Use: “I think ___ is good/bad for our health because ___.”"],
+    ["8","EXIT TICKET","2 new words • 1 healthy activity • 1 because-sentence","Great work! What healthy activity will you do this week?"]
+  ];
+  document.getElementById('slides').innerHTML=slides.map(s=>`<div class="slide"><small>SLIDE ${s[0]}/8</small><h2>${s[1]}</h2><h3>${s[2]}</h3><p>${s[3]}</p></div>`).join('');
+
+  const qs = [
+    ["1. The topic of Unit 2 is …","A. Hobbies &nbsp;&nbsp; B. Healthy Living &nbsp;&nbsp; C. Community Service &nbsp;&nbsp; D. Music and Arts","B","Nhận biết"],
+    ["2. In the opening conversation, Mark and Mi mainly talk about …","A. outdoor activities and health &nbsp;&nbsp; B. school subjects &nbsp;&nbsp; C. a film &nbsp;&nbsp; D. shopping","A","Thông hiểu"],
+    ["3. Choose the word closest in meaning to “well-liked by many people”.","A. fresh &nbsp;&nbsp; B. popular &nbsp;&nbsp; C. quiet &nbsp;&nbsp; D. bad","B","Nhận biết"],
+    ["4. Which activity is generally good for health?","A. cycling outdoors &nbsp;&nbsp; B. staying up very late &nbsp;&nbsp; C. never exercising &nbsp;&nbsp; D. skipping meals","A","Thông hiểu"],
+    ["5. Complete: “There is a lot of ___ air in the countryside.”","A. fresh &nbsp;&nbsp; B. popular &nbsp;&nbsp; C. weak &nbsp;&nbsp; D. busy","A","Nhận biết"],
+    ["6. Choose the best response: “Outdoor activities are good for our health.”","A. I agree. &nbsp;&nbsp; B. Never mind. &nbsp;&nbsp; C. Here you are. &nbsp;&nbsp; D. No, thanks.","A","Thông hiểu"],
+    ["7. Write one sentence about a healthy activity using <i>because</i>.","Tự luận ngắn. Ví dụ hợp lệ: “Cycling is good for our health because it helps us exercise.”","Chấm theo ý đúng + ngôn ngữ rõ","Vận dụng"],
+    ["8. Classify: “drinking enough water” – good or bad for health? Explain briefly.","Tự luận ngắn.","Good; nêu lý do hợp lý","Vận dụng"]
+  ];
+  document.getElementById('quiz').innerHTML=`
+    <article class="lesson"><h2>KIỂM TRA NHANH – UNIT 2: GETTING STARTED</h2>
+    <p><b>Thời gian:</b> 10–12 phút • <b>Mục đích:</b> đánh giá nhanh từ vựng, hiểu hội thoại và khả năng vận dụng.</p>
+    <table><tr><th>Mức độ</th><th>Câu</th><th>Trọng tâm</th></tr>
+      <tr><td>Nhận biết</td><td>1, 3, 5</td><td>Chủ đề và từ vựng</td></tr>
+      <tr><td>Thông hiểu</td><td>2, 4, 6</td><td>Ý chính và lựa chọn phù hợp</td></tr>
+      <tr><td>Vận dụng</td><td>7, 8</td><td>Tạo câu/giải thích</td></tr>
+    </table>
+    ${qs.map(q=>`<div class="quiz-q"><b>${q[0]}</b><div>${q[1]}</div><div class="ans">Đáp án: ${q[2]} <span style="color:#64748b;font-weight:400">(${q[3]})</span></div></div>`).join('')}
+    <h3>Gợi ý chấm</h3><p>Câu 1–6: mỗi câu 1 điểm. Câu 7–8: mỗi câu 2 điểm (1 điểm nội dung phù hợp + 1 điểm ngôn ngữ/giải thích rõ). Tổng: 10 điểm.</p>
+    </article>`;
+}
+function resetDemo(){
+ document.getElementById('duration').value='45'; document.getElementById('level').value='mixed';
+ document.getElementById('device').selectedIndex=0;
+ document.getElementById('focus').value='Tăng tương tác nói, hoạt động cặp/nhóm, kiểm tra nhanh cuối giờ.';
+ generate();
+}
+function exportDoc(){
+ const content=document.getElementById(current).innerHTML;
+ const html=`<html><head><meta charset="utf-8"><style>body{font-family:Arial;line-height:1.4}table{border-collapse:collapse;width:100%}td,th{border:1px solid #777;padding:6px}th{background:#eee}</style></head><body>${content}</body></html>`;
+ const blob=new Blob(['\ufeff',html],{type:'application/msword'});
+ const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`EduAI_${current}_English7_Unit2.doc`; a.click(); URL.revokeObjectURL(a.href);
+}
+async function copyCurrent(){
+ const text=document.getElementById(current).innerText;
+ try{await navigator.clipboard.writeText(text); alert('Đã sao chép nội dung.');}
+ catch(e){alert('Trình duyệt chặn sao chép tự động. Hãy chọn nội dung và Ctrl+C.');}
+}
+generate();
+</script>
+</body>
+</html>
